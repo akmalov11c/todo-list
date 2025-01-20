@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: "Roboto", serif;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+}
+
+.todo__app {
+  width: 100%;
+  max-width: 540px;
+  margin: 100px auto 0;
+  background-color: #fafafa;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  background: #c9ccd3;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-blend-mode: lighten;
+}
+
+.title {
+  color: #032253;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.title img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.task__input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.input__box {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14;
+}
+
+.task__btn {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background-color: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+}
+
+.task__btn:hover {
+  background-color: #ff5845d2;
+}
+
+.task__list li {
+  position: relative;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.task__list li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url("./assets/unchecked.png");
+  background-size: cover;
+  background-position: center;
+  top: 8px;
+  left: 8px;
+}
+
+.task__list li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+.task__list li.checked::before {
+  background-image: url("./assets/checked.png");
+}
+
+.task__list li span {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.task__list li span:hover {
+  background-color: #edeef0;
+}
