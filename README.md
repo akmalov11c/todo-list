@@ -23,6 +23,7 @@ A beautifully designed and functional To-Do List application to manage your task
 ## 🚀 How to Use
 
 1. Clone the repository to your local machine:
+   
    ```bash
    git clone https://github.com/your-username/todo-list-app.git
    cd todo-list-app
